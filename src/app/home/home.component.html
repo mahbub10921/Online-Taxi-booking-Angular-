@@ -1,0 +1,201 @@
+<div class="div">
+    <img src="assets\Dako-Logo.png" height="80px" width="180px">
+    <a href="" class="divin" routerLink="/contact" style="color:darkslateblue"> <b>Contactus</b> </a>
+    <div style="flex: 1;"></div>
+    <a href="" class="divin" routerLink="/log" style="color:darkslateblue"> <b>Login</b> </a>
+    <a href="" class="divin" routerLink="/log" style="color:darkslateblue"> <b>Signup</b> </a>
+
+</div>
+<div style="position: relative;">
+    <img src="assets\TaxiApp1.png" alt="" height="450" width="123%">
+
+    <h1
+        style="position: absolute;text-shadow:black 2px -2px;   left:50px;top:10px;font-size:50px;font-weight: 30px;color:darkslateblue">
+        Best & Most Professional <br> Inter-City Service</h1>
+</div>
+
+<div class="search">
+
+    <h3 style="text-align: center;margin-top: 5px;"> <b>where are you going?</b> </h3> <br> 
+    <!-- <div style="display: flex;height:150px;margin: auto;padding: 4px;overflow: hidden;width: 800px;border: 1px solid black;"> -->
+        <form action="" [formGroup]="form" (ngSubmit)="submit()">
+            <!-- <label for="">From</label>
+            <input type="text"style="border-radius:10px;margin-left: 1px ;box-sizing: border-box;padding: 2px;"formControlName="from_" id="search" autocomplete="chrome-off">
+            <label for="" style="margin-left: 10px;">To</label>
+            <input type="text" style="border-radius:10px;margin-left:1px ;" formControlName="to_"> <br>
+            <button type="submit"style="border-radius: 100px;margin: 20px 0 0 200px;background: black;color: white;">Go</button> -->
+
+
+
+
+            <!-- <label for="">From</label> 
+                <select name="" id="" style="width: 150px;">
+                    <option value=""></option>
+                </select> 
+                <label for="" style="margin-left: 10px;">To</label>
+                <select name="" id="" style="width: 150px;">
+                    <option value=""></option>
+                </select> <br> -->
+
+
+
+            
+
+            <div style="display: flex;justify-content: space-evenly;">
+                <div>
+                    <label for="">Pickup Location</label> 
+                    <ng-select
+                        style="width: 300px;border: 1px solid black;margin-left: 0px;padding: 4px;border-radius: 5px;background: rgb(245, 247, 248); box-shadow: 0 .5rem 1rem
+                        rgba(0,0,0, .15)!important;"
+                        formControlName="from_"> <br> <br>
+                        <ng-option *ngFor="let li of List" [value]="li.location">
+                            {{li.location}}
+
+
+
+                        </ng-option>
+                    </ng-select>
+                </div>
+
+                <div> 
+                    <label for="">Dropup Location</label> 
+                    <ng-select style="width: 300px;border: 1px solid black;border-radius: 5px;padding:4px;background: rgb(245, 246, 247); box-shadow: 0 .5rem 1rem
+                    rgba(0,0,0, .15)!important;"
+                        formControlName="to_">
+                        <ng-option *ngFor="let li of List" [value]="li.location">
+                            {{li.location}}
+
+                        </ng-option>
+                    </ng-select> </div>
+
+            </div>
+
+
+
+
+            <button type="submit" style="border-radius: 5px;z-index: -9999; width:60px;margin: 20px 0 0 280px;background: black;color: white;">Go</button>
+
+        </form>
+    <!-- </div> -->
+
+</div>
+<br> <br>
+<br> <br>
+<div style="width:910px;margin: auto;">
+
+    <h3 style="text-align: center;"> <b> Ways to plan with Dako </b> </h3> <br>
+    <div style="width:900px;display: flex;justify-content: space-between;margin: auto;">
+        <div style="width:270px;height:140px;"> <img src="assets\demand2.jpg" alt=""
+                style="height: 120px;width: 270px;border-radius: 5px;"> <br>
+            <h5> <b>On-Demand-Taxi </b> </h5>
+            <h6> <b>Request a local taxi on demand</b> </h6>
+        </div>
+        <div style="width:270px;height:140px;"> <img src="assets\suv2.png" alt=""
+                style="height: 120px;width: 270px;border-radius: 5px;background: rgb(142, 142, 221);">
+            <h5> <b> For-Large-Family </b> </h5>
+            <h6> <b>Room for the whole crew and bags</b> </h6>
+        </div>
+        <div style="width:270px;height:140px;"> <img src="assets\rental2.jpg" alt=""
+                style="height: 120px;width: 270px;border-radius: 5px;">
+            <h5> <b>Rental </b></h5>
+            <h6> <b>Travel for 1 to 12 hours</b> </h6>
+        </div>
+
+    </div>
+
+</div>
+<br> <br> <br> <br> <br>
+
+<div>
+    <h3 style="text-align:center ;margin-top:20px ;font-size: 50px;"> <b>Why Us ?</b> </h3>
+    <div class="containe">
+        <div class="contan" style="background: rgb(237, 245, 248);"> <img src="assets\distance.png" height="50px"
+                width="60px">
+            <div style="transition: 2s;"> <b> Distance, Duration & Fare Calculation </b> </div>
+        </div>
+        <div class="contan" style="background: rgb(237, 245, 248);"> <img src="assets\pickup-point.png" height="50px"
+                width="60px">
+            <div style="margin-left: 15px;"> <b>Exact Pickup and Drop Location </b> </div>
+        </div>
+        <div class="contan" style="background: rgb(237, 245, 248);"> <img src="assets\trackingpng.png" height="40px"
+                width="50px" style="margin-left: 15px;">
+            <div style="margin-left: 15px;"> <b>Real Time Tracking </b> </div>
+        </div>
+        <div class="contan" style="background: rgb(237, 245, 248);"> <img src="assets\taxi-service--v1.png"
+                height="40px" width="60px">
+            <div style="margin-left: 25px;"> <b> Wide Range of Cars </b> </div>
+        </div>
+        <div class="contan" style="background: rgb(237, 245, 248);"> <img src="assets\card-in-use.png" height="50px"
+                width="60px">
+            <div style="margin-left: 20px;"> <b>Payment Gateway </b> </div>
+        </div>
+        <div class="contan" style="background: rgb(237, 245, 248);"> <img src="assets\siren.png" height="50px"
+                width="60px">
+            <div style="margin-left: 25px;"> <b> Emergency Help </b> </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="bottom">
+    <div style="width:200px;text-align: center;">
+        <h4 style="padding: 20px;text-decoration: underline;"> <b style="color:rgb(43, 34, 103);"> About Dako </b> </h4>
+        <span style="padding: 3px;">Shohoz, owned and operated by Shohoj Limited, is Bangladesh’s largest online ticket
+            destination, which is committed to making your life convenient, easier and smarter.</span>
+    </div>
+    <div style="text-align: center;">
+        <h4 style="padding: 20px;text-align: center;text-decoration: underline;"> <b
+                style="color:rgb(40, 31, 99);">Quick Link</b> </h4>
+        <ul style="list-style-type:none;margin-top: 2px;">
+
+            <a href="" style="color: black;">
+                <li style="padding: 3px;">Home</li>
+            </a>
+            <a href="" style="color: black;">
+                <li style="padding: 3px;">About Us</li>
+            </a>
+            <a href="" style="color: black;">
+                <li style="padding: 3px;">Contact Us</li>
+            </a>
+            <a href="" style="color: black;">
+                <li style="padding: 3px;">Service</li>
+            </a>
+            <a href="" style="color: black;">
+                <li style="padding: 3px;">FAQ</li>
+            </a>
+
+        </ul>
+    </div>
+    <div style="text-align: center;">
+        <h4 style="padding: 20px;text-align: center;text-decoration: underline;"> <b style="color:rgb(36, 27, 97);">
+                Connect With </b> </h4>
+
+        <ul style="list-style-type:none;;">
+            <a href="" style="color: black;">
+                <li> <img src="assets\facebook-new (1).png" alt="" style="padding: 3px;"></li>
+            </a>
+            <a href="" style="color: black;">
+                <li> <img src="assets\youtube-play.png" alt="" style="padding: 3px;"> </li>
+            </a>
+            <a href="" style="color: black;">
+                <li> <img src="assets\instagram-new.png" alt="" style="padding: 3px;"> </li>
+            </a>
+            <a href="" style="color: black;">
+                <li> <img src="assets\linkedin.png" alt="" style="padding: 3px;"> </li>
+            </a>
+
+        </ul>
+
+
+    </div>
+
+</div>

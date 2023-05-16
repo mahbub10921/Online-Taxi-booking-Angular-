@@ -1,0 +1,137 @@
+<div class="main">
+    <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Total Earnings <br> 80,000tk</div>
+    <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Pending Earning <br> 800tk</div>
+    <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;">Total Trip <br> 30</div>
+    <!-- <button class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;border-radius: 10px;" [ngStyle]="{'background-color': newReq ? 'red' : 'white'}" data-target="#exampleModalCenter" data-toggle="modal" (click)="submit()">Incoming Request</button> -->
+    <button type="button" [ngClass]="{'blink-button': newReq}" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;margin-top:30px ;" data-target="#exampleModalCenter" data-toggle="modal" (click)="submit()">Incoming Request</button>
+
+  </div>
+
+
+  <div class="content py-5 mt-5">
+    <div class="container">
+        <div class="card card-outline card-purple shadow rounded-0">
+            <div class="card-header">
+                <h4 class="card-title" style="color: rgb(63, 5, 118);">My Booking List</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped table-bordered table-hover">
+                    <colgroup>
+                        <col width="5%">
+                        <col width="15%">
+                        <col width="15%">
+                        <col width="30%">
+                        <col width="10%">
+                        <col width="15%">
+                    </colgroup>
+                    <thead>
+                        <tr class="bg-gradient-dark">
+                            <th class="text-cente">#</th>
+                            <th class="text-center">Date Booked</th>
+                            <th class="text-center">Ref. Code</th>
+                            <th class="text-center">Details</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td style="text-align: center;">1</td>
+                        <td style="text-align: center;">12-04-2022</td>
+                        <td style="text-align: center;">123-674</td>
+                        <td style="text-align: center;">Pickup:Agargaon <br> Dropup:Khilgaon</td>
+                        <td style="text-align: center;">Dropped Off</td>
+                        <td style="text-align: center;">View Details</td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="text-align: center;">2</td>
+                        <td style="text-align: center;">09-04-2022</td>
+                        <td style="text-align: center;">746-674</td>
+                        <td style="text-align: center;">Pickup:Motijheel <br> Dropup:Mirpur-10</td>
+                        <td style="text-align: center;">Dropped Off</td>
+                        <td style="text-align: center;">View Details</td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="text-align: center;">3</td>
+                        <td style="text-align: center;">08-04-2022</td>
+                        <td style="text-align: center;">723-632</td>
+                        <td style="text-align: center;">Pickup:Mohhamadpur <br> Dropup:Khilgaon</td>
+                        <td style="text-align: center;">Dropped Off</td>
+                        <td style="text-align: center;">View Details</td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="text-align: center;">4</td>
+                        <td style="text-align: center;">05-04-2022</td>
+                        <td style="text-align: center;">123-674</td>
+                        <td style="text-align: center;">Pickup:Agargaon <br> Dropup:Khilgaon</td>
+                        <td style="text-align: center;">Dropped Off</td>
+                        <td style="text-align: center;">View Details</td>
+
+                    </tr>
+                  
+                </table>
+            </div>  
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <div *ngIf="request.status" class="popup-container">
+    <div class="popup">
+       Popup content 
+      <h2>{{ request }}</h2>
+      <p>{{ request}}</p>
+      <button (click)="closePopup()">Close Popup</button>
+    </div>
+  </div>
+  
+  <button (click)="openPopup()">Open Popup</button> -->
+
+
+
+
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="position: absolute;top: 20px;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">Confirm Booking</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form  >
+            <div class="form-group" >
+              <label for="recipient-name" class="col-form-label">Pickup Point</label>
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{myObject.pickup}}">
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Dropup Point</label>
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{myObject.dropup}}">
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Fare</label>
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{myObject.fare}}">
+            </div>
+           
+           
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" >C</button> -->
+          <button type="button" class="btn btn-primary" (click)="confirm()">Confirm Booking</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+   

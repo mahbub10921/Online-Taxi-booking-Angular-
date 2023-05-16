@@ -1,0 +1,21 @@
+.div{
+    display: flex;
+    align-items: center;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    height: 60px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.divin{
+    margin: 0 16px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    font-weight: 600;
+}

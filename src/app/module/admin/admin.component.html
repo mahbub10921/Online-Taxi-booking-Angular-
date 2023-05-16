@@ -1,0 +1,26 @@
+<div class="div">
+    <img src="assets\Dako-Logo.png" height="90px" width="180px">
+    <div class="divin" style="font-size: 20px;">Admin DashBoard</div>
+
+    <div style="flex: 1;"></div>
+    <div class="divin" style="font-size: 2rem;" >Welcome &nbsp; {{userName}}</div>
+    <div style="position: absolute;top: 78px;background: rgb(255, 255, 255);height:7px; width:60px;left: 150px; "></div>
+
+</div>
+
+
+
+
+<div class="sidebar">
+    <a  routerLink="/dash/adhome"> <img src="assets\kkk.png" alt="">  <b>Manage Category</b> </a>
+    <a  routerLink="/dash/driverlist"> <img src="assets\driver.png" alt=""> <b>Cab Management</b></a>
+    <a href="#news"> <img src="assets\ledger.png" alt=""> <b>Driver Management</b></a>
+    <a href="#news"> <img src="assets\tax.png" alt=""> <b>View Bookings</b></a>
+
+    <a href="#news" > <img src="assets\profile.png" alt=""> <b> Registered Client</b></a>
+    <a href="#news"> <img src="assets\services.png" alt=""> <b>Settings</b></a>
+
+    <a href="#about" (click)="logout()"> <img src="assets\logout-rounded.png" alt=""> <b>Logout</b> </a> 
+  </div>
+  <router-outlet></router-outlet>   
+

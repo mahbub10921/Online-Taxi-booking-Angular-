@@ -1,0 +1,33 @@
+.main{
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  column-gap: 20px;
+  height: 300px;
+  width: 830px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-items: center;
+  /* background: whitesmoke; */
+  border-radius: 2px;
+  margin-top: 30px;
+}
+.child{
+  height:70px;
+  width:220px;
+  border: 1px solid #eee;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 2px;
+  background-color: #0a5b9a;
+color: white;
+  box-shadow: inset 1px 1px 5px 5px#e8e6e6;
+font-size: 20px;
+}
+
+
+.container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow:hover{
+  transition: all .5s;
+
+}

@@ -1,0 +1,45 @@
+<!-- <div [@blink]="blinkState" class="popup">New Taxi Request!</div> -->
+<div class="wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul class="sidebar-nav">
+        <li>
+          <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        </li>
+        <li>
+          <a routerLink="/manage-routes" routerLinkActive="active">Manage Routes</a>
+        </li>
+        <li>
+          <a routerLink="/manage-cars" routerLinkActive="active">Manage Cars</a>
+        </li>
+        <li>
+          <a routerLink="/manage-drivers" routerLinkActive="active">Manage Drivers</a>
+        </li>
+        <li>
+          <a routerLink="/settings" routerLinkActive="active">Settings</a>
+        </li>
+      </ul>
+    </aside>
+  
+    <!-- Main content -->
+    <div class="main-content">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <button class="navbar-toggle" (click)="toggleSidebar()">
+          <span class="navbar-toggle-icon"></span>
+        </button>
+        <div class="navbar-brand">
+          <span class="company-name">Your Company Name</span>
+        </div>
+        <div class="navbar-items">
+          <button class="logout-button" (click)="logout()">Logout</button>
+        </div>
+      </nav>
+  
+      <!-- Router outlet for displaying the routed components -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
+  
+  

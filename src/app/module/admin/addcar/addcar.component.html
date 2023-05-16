@@ -1,0 +1,47 @@
+<div class="card card-outline card-purple rounded-0">
+	<div class="card-header">
+		<h3>Register New Cab</h3>
+	</div>
+	<div class="card-body">
+		<form action="" id="cab-form"  [formGroup]="form" (ngSubmit)="submit()">
+			<input type="hidden" name ="id" formControlName="id">
+            
+			<div class="form-group">
+				<label for="cab_reg_no" class="control-label">Registration No.</label>
+                <input name="cab_reg_no" id="cab_reg_no" type="text" class="form-control rounded-0"  required formControlName="registration">
+			</div>
+            <div class="form-group">
+				<label for="cab_reg_no" class="control-label">Vehicle Model</label>
+                <input name="cab_reg_no" id="cab_reg_no" type="text" class="form-control rounded-0"  required formControlName="model">
+			</div>
+
+            <div class="form-group">
+				<label for="category_id" class="control-label">Vehicle Company</label>
+                <select name="category_id" id="category_id" class="custom-select select" formControlName="company">
+                    <option style="font-size: 15px;">Toyota</option>
+                    <option style="font-size: 15px;">Honda</option>
+                    <option style="font-size: 15px;">Nissan</option>
+
+                   
+                </select>
+			</div>
+
+
+
+            <div class="form-group">
+				<label for="category_id" class="control-label">Vehicle Category</label>
+                <select name="category_id" id="category_id" class="custom-select select2" formControlName="category">
+                    <option style="font-size: 15px;">4 Seat</option>
+                    <option style="font-size: 15px;">7 Seat</option>
+
+                   
+                </select>
+			</div>
+
+		</form>
+	</div>
+	<div class="card-footer">
+		<button class="btn btn-flat btn-success" form="cab-form" type="submit">Save</button>
+		<a class="btn btn-flat btn-danger" href="?page=cabs">Cancel</a>
+	</div>
+</div>

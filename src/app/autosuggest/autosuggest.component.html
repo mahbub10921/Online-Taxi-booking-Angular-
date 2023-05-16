@@ -1,0 +1,76 @@
+
+  <div class="container">
+            <div class="wrapper">
+              <input type="text" name="search" id="search" placeholder="Type to search" autocomplete="chrome-off">
+              <button><i class="fa fa-search"></i></button>
+              <div class="results">
+                <ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+
+<!-- <script>
+
+
+function auto(){
+
+
+
+    let searchable = [
+  'Elastic',
+  'PHP',
+  'Something about CSS',
+  'How to code',
+  'JavaScript',
+  'Coding',
+  'Some other item',
+];
+
+const searchInput = document.getElementById('search');
+const searchWrapper = document.querySelector('.wrapper');
+const resultsWrapper = document.querySelector('.results');
+
+searchInput.addEventListener('keyup', () => {
+  let results = [];
+  let input = searchInput.value;
+  if (input.length) {
+    results = searchable.filter((item) => {
+      return item.toLowerCase().includes(input.toLowerCase());
+    });
+  }
+  renderResults(results);
+});
+
+function renderResults(results) {
+  if (!results.length) {
+    return searchWrapper.classList.remove('show');
+  }
+
+  const content = results
+    .map((item) => {
+      return `<li>${item}</li>`;
+    })
+    .join('');
+
+  searchWrapper.classList.add('show');
+  resultsWrapper.innerHTML = `<ul>${content}</ul>`;
+}
+
+
+}
+
+
+
+
+
+
+
+</script> -->
+
+
+
+ 
