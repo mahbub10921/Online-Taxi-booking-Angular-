@@ -59,6 +59,9 @@ private updateSubscription: Subscription;
 
 newReq:boolean = false;
 reqQuent:number = 0;
+stringId= localStorage.getItem("id");
+numberId = Number(this.stringId);
+
 
 newReqObj: any;
 
@@ -86,6 +89,8 @@ constructor(private storageService:StorageService,
 if(this.myObject.status){
   console.log('tttttttttttt');
   
+
+  
   this.newReq = true;
 }
     })
@@ -106,7 +111,8 @@ submit(){
 
 
 confirm(){
-  this.service.updateRequest(152).subscribe();
+  this.service.updateRequest(this.myObject.id).subscribe();
+  this.service.updateTaxiRequest(this.numberId).subscribe();
 }
 
 

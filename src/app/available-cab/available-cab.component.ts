@@ -49,6 +49,8 @@ this.Form = new FormGroup({
   driver:new FormControl(this.post1.driver.name),
   fare:new FormControl((this.post1.fair  * this.distance2).toFixed(2))
 })
+
+localStorage.setItem("id", String(this.post1.id))
 }
 
 

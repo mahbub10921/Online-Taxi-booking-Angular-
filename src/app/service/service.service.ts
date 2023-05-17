@@ -40,12 +40,7 @@ export class ServiceService {
       )
   }
 
-
-
-
-
-
-  saveRequest(save:IncomingRequest ){
+saveRequest(save:IncomingRequest ){
    return this.httpservice.post<IncomingRequest>(this.URL + '/request', JSON.stringify(save), httpOptions).pipe(
       catchError(this.errorHandler)
     )
@@ -59,12 +54,7 @@ export class ServiceService {
       )
   }
 
-
-
-
-
-
-  find(id: number): Observable<Taxi> {
+ find(id: number): Observable<Taxi> {
     return this.httpservice.get<Taxi>(this.URL + '/taxi/' + id)
 
   }
@@ -73,11 +63,6 @@ export class ServiceService {
     return this.httpservice.get<Driver>(this.URL + '/driver/' + id)
 
   }
-
-
-  // update(id:number,post:Bus){
-  // return this.httpservice.put(this.URL +'/bus-Schedule/'+ id,post )
-  // }
 
   update(post: Taxi) {
     return this.httpservice.put(this.URL + '/taxi', post);
@@ -88,13 +73,34 @@ export class ServiceService {
     return this.httpservice.put(this.URL + '/driver/' + id, post)
   }
 
-  updateRequest(id: number){
+
+
+
+
+
+
+
+
+
+
+ updateRequest(id: number){
     return this.httpservice.get(this.URL + '/cus/' + id)
+   }
+
+   
+   updateTaxiRequest(id: number){
+    return this.httpservice.get(this.URL + '/updateCustom/' + id)
    }
 
 
 
-  errorHandler(error: any) {
+
+
+
+
+
+
+   errorHandler(error: any) {
     let errormessage = '';
     if (error.error instanceof ErrorEvent) {
       errormessage = error.error.message;
