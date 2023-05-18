@@ -35,6 +35,8 @@ export class PopComponent implements OnInit {
 
   condition = false; 
 
+  newReq:boolean = false;
+
 
 }
 

@@ -135,6 +135,13 @@ saveRequest(save:IncomingRequest ){
 
 
 
+
+
+  getAdminMessage(){
+    const task = this.httpservice.get<any>(this.URL + '/adminMessage');
+    return task;
+  }
+
   getTaxi() {
     const task2 = this.httpservice.get<Taxi[]>(this.URL + '/custom')
     return task2;

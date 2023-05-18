@@ -5,6 +5,7 @@ import { HomeComponent } from '../home/home.component';
 import { Taxi } from '../inter/taxi';
 import { FormControl, FormGroup } from '@angular/forms';
 import { IncomingRequest } from '../inter/request';
+import { Subscription, interval } from 'rxjs';
 
 @Component({
   selector: 'app-available-cab',
@@ -20,6 +21,7 @@ export class AvailableCabComponent {
   ){}
 
   Request:IncomingRequest;
+  private subscription:Subscription;
 
 confirm(){
   this.router.navigateByUrl('/bookingform');
@@ -123,18 +125,21 @@ ngOnInit(): void {
       // this.Form.setValue(this.post);
    
     });
+this.subscription = interval(3000).subscribe(val => {this.getData()
+})
 
+  }
 
-  
+  message:any={
+    id:null,
+    message:null,
+    status:null
 
+  }
 
-
-
-
-
-
-
-}
+  getData(){
+this.service.getAdminMessage().subscribe((abc:any)=>{this.message = abc});
+  }
 
 deletePost(id:number){
 this.service.deleteTask(id).subscribe(res=>{
