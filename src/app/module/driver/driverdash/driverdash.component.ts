@@ -75,7 +75,7 @@ constructor(private storageService:StorageService,
 }
   ngOnInit(): void {
     
-    this.updateSubscription = interval(3000).subscribe(val =>{
+    this.updateSubscription = interval(1000).subscribe(val =>{
       this.getData()})
   }
 
