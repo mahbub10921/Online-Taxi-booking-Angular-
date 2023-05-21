@@ -39,6 +39,14 @@ Form:FormGroup = new FormGroup({
 
 
 
+
+
+
+
+
+
+
+
 show(tasks:any){
 this.post1=tasks;
 console.log(this.post1)
@@ -53,7 +61,34 @@ this.Form = new FormGroup({
 })
 
 localStorage.setItem("id", String(this.post1.id))
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -65,6 +100,13 @@ list:any={
   fare:null,
   status:null
 }
+
+
+
+
+
+
+
 
 submit(){
   console.log("hello")
@@ -149,11 +191,7 @@ this.post=this.post.filter(item=>item.id !==id);
 
 }
 
-// myfunction(){
-//   this.service.getTask().subscribe((abc:Taxi[])=>{this.post=abc});
-//   console.log(this.post);
 
-// }
 
 
 

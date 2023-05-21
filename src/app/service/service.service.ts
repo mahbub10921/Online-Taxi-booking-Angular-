@@ -5,6 +5,7 @@ import { Taxi } from '../inter/taxi';
 import { Driver } from '../inter/driver';
 import { Route } from '../inter/route';
 import { IncomingRequest } from '../inter/request';
+import { BookingList } from '../inter/driverBookingList';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -47,12 +48,30 @@ saveRequest(save:IncomingRequest ){
   }
 
 
+
+
+
+
+
+addNewBooking(add:BookingList){
+return this.httpservice.post<BookingList>(this.URL + '/bookingRequest', JSON.stringify(add), httpOptions).pipe(
+  catchError(this.errorHandler)
+)
+}
+
+
+
   addDriver(post: Driver) {
     return this.httpservice.post<Driver>(this.URL + '/driver', JSON.stringify(post), httpOptions)
       .pipe(
         catchError(this.errorHandler)
       )
   }
+
+
+
+
+
 
  find(id: number): Observable<Taxi> {
     return this.httpservice.get<Taxi>(this.URL + '/taxi/' + id)
@@ -80,7 +99,9 @@ saveRequest(save:IncomingRequest ){
 
 
 
-
+setBookingFalse(id:number){
+return this.httpservice.get(this.URL + '/booking/' + id )
+}
 
 
  setRequestFalse(id: number){

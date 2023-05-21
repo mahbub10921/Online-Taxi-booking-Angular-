@@ -5,6 +5,7 @@ import { IncomingRequest } from 'src/app/inter/request';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/service/service.service';
 import { StorageService } from 'src/app/loginService/storage.service';
+import { data } from 'jquery';
 
 @Component({
   selector: 'app-driverdash',
@@ -28,6 +29,21 @@ title1="Motaleb"
 // url = 'http://localhost:8080/websocket'
 // client: any;
 // greeting: string[] = [];
+
+
+
+booking:any={
+  date_booked:null,
+  ref_code:null,
+  pickup:null,
+  dropup:null,
+  status:null,
+  fare:null,
+}
+
+
+
+
 
 
 
@@ -59,8 +75,13 @@ private updateSubscription: Subscription;
 
 newReq:boolean = false;
 reqQuent:number = 0;
-stringId= localStorage.getItem("id");
-numberId = Number(this.stringId);
+
+
+
+
+
+id= Number(localStorage.getItem("id"));
+// numberId = Number(this.stringId);
 
 
 newReqObj: any;
@@ -75,7 +96,7 @@ constructor(private storageService:StorageService,
 }
   ngOnInit(): void {
     
-    this.updateSubscription = interval(1000).subscribe(val =>{
+    this.updateSubscription = interval(5000).subscribe(val =>{
       this.getData()})
   }
 
@@ -94,9 +115,17 @@ if(this.myObject.status){
   this.newReq = true;
 }
     })
-    // console.log('pickup',this.myObject.pickup)
-    // console.log(this.myObject.dropup)
+    
+this.booking = {
+  date_booked:new Date(),
+  ref_code:null,
+  pickup:this.myObject.pickup,
+  dropup:this.myObject.dropup,
+  status:'pending',
+  fare:this.myObject.fare,
+}
 
+this.service.addNewBooking(this.booking).subscribe()
 
 
 }
@@ -112,7 +141,7 @@ submit(){
 
 confirm(){
   this.service.setRequestFalse(this.myObject.id).subscribe();
-  this.service.setTaxiFalse(this.numberId).subscribe();
+  this.service.setTaxiFalse(this.id).subscribe();
 }
 
 
