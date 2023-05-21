@@ -21,7 +21,7 @@ export class ManagecarComponent {
 
 
   ngOnInit(): void {
-    this.service.getTaxi().subscribe((abc:Taxi[])=>{this.post=abc})
+    this.service.getAllTaxi().subscribe((abc:Taxi[])=>{this.post=abc})
     console.log(this.post)
   }
 

@@ -83,12 +83,12 @@ saveRequest(save:IncomingRequest ){
 
 
 
- updateRequest(id: number){
+ setRequestFalse(id: number){
     return this.httpservice.get(this.URL + '/cus/' + id)
    }
 
    
-   updateTaxiRequest(id: number){
+   setTaxiFalse(id: number){
     return this.httpservice.get(this.URL + '/updateCustom/' + id)
    }
 
@@ -142,12 +142,12 @@ saveRequest(save:IncomingRequest ){
     return task;
   }
 
-  getTaxi() {
+  getAllTaxi() {
     const task2 = this.httpservice.get<Taxi[]>(this.URL + '/custom')
     return task2;
   }
 
-  getTaxi2() {
+  getActiveTaxi() {
     const task2 = this.httpservice.get<Taxi[]>(this.URL + '/getCustom')
     return task2;
   }

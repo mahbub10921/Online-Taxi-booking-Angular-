@@ -107,7 +107,7 @@ distance = localStorage.getItem("dis")
 distance2 = Number(this.distance);
 
 ngOnInit(): void {
-  this.service.getTaxi().subscribe((abc:Taxi[])=>{this.post=abc})
+  this.service.getActiveTaxi().subscribe((abc:Taxi[])=>{this.post=abc})
   console.log(this.post)
 
   this.Pick = localStorage.getItem("pickup");

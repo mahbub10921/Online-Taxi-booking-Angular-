@@ -111,8 +111,8 @@ submit(){
 
 
 confirm(){
-  this.service.updateRequest(this.myObject.id).subscribe();
-  this.service.updateTaxiRequest(this.numberId).subscribe();
+  this.service.setRequestFalse(this.myObject.id).subscribe();
+  this.service.setTaxiFalse(this.numberId).subscribe();
 }
 
 
