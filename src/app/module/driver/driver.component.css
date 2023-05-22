@@ -1,7 +1,7 @@
 .div{
     display: flex;
     align-items: center;
-    
+    background: rgb(70, 71, 70);
     top: 0;
     left: 0;
     right: 0;

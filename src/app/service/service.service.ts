@@ -99,7 +99,7 @@ return this.httpservice.post<BookingList>(this.URL + '/bookingRequest', JSON.str
 
 
 
-setBookingFalse(id:number){
+setDriverBookingFalse(id:number){
 return this.httpservice.get(this.URL + '/booking/' + id )
 }
 
@@ -112,14 +112,6 @@ return this.httpservice.get(this.URL + '/booking/' + id )
    setTaxiFalse(id: number){
     return this.httpservice.get(this.URL + '/updateCustom/' + id)
    }
-
-
-
-
-
-
-
-
 
    errorHandler(error: any) {
     let errormessage = '';
@@ -156,7 +148,10 @@ return this.httpservice.get(this.URL + '/booking/' + id )
 
 
 
-
+getActiveBookingList(){
+  const task = this.httpservice.get<BookingList>(this.URL + '/customGet');
+  return task;
+}
 
   getAdminMessage(){
     const task = this.httpservice.get<any>(this.URL + '/adminMessage');

@@ -29,18 +29,32 @@
                             <th class="text-cente">#</th>
                             <th class="text-center">Date Booked</th>
                             <th class="text-center">Ref. Code</th>
-                            <th class="text-center">Details</th>
+                            <th class="text-center">Pickup</th>
+                            <th class="text-center">Dropup</th>
+
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
+                    <tr [ngClass]="{'blink-button2': new}">
+                      
+                      <td style="text-align: center;">{{1}}</td>
+                      <td style="text-align: center;">{{myObject3.date_booked}}</td>
+                      <td style="text-align: center;">{{myObject3.ref_code}}</td>
+                      <td style="text-align: center;">{{myObject3.pickup}}</td>
+                      <td style="text-align: center;">{{myObject3.dropup}}</td>
+                      <td style="text-align: center;">{{myObject3.status}}</td>
+                      <td style="text-align: center;"  (click)="hobe(myObject3.id)"  ><button>Go</button></td>
+
+
+                  </tr>
                     <tr>
                         <td style="text-align: center;">1</td>
                         <td style="text-align: center;">12-04-2022</td>
                         <td style="text-align: center;">123-674</td>
-                        <td style="text-align: center;">Pickup:Agargaon <br> Dropup:Khilgaon</td>
-                        <td style="text-align: center;">Dropped Off</td>
-                        <td style="text-align: center;">View Details</td>
+                        <td style="text-align: center;">Agargaon</td>
+                        <td style="text-align: center;">Malibagh</td>
+                        <td style="text-align: center;">Booked</td>
 
                     </tr>
 

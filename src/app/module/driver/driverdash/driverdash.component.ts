@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/service/service.service';
 import { StorageService } from 'src/app/loginService/storage.service';
 import { data } from 'jquery';
+import { BookingList } from 'src/app/inter/driverBookingList';
 
 @Component({
   selector: 'app-driverdash',
@@ -25,6 +26,7 @@ import { data } from 'jquery';
 })
 export class DriverdashComponent {
 title1="Motaleb"
+idd:number;
 
 // url = 'http://localhost:8080/websocket'
 // client: any;
@@ -33,15 +35,24 @@ title1="Motaleb"
 
 
 booking:any={
+  id:null,
   date_booked:null,
   ref_code:null,
   pickup:null,
   dropup:null,
   status:null,
   fare:null,
+  state:null
 }
 
+hobe(id:number){
+  
+  this.idd=id
+  console.log("eitai" + this.idd);
+  
+  this.service.setDriverBookingFalse(this.idd).subscribe()
 
+}
 
 
 
@@ -76,7 +87,7 @@ private updateSubscription: Subscription;
 newReq:boolean = false;
 reqQuent:number = 0;
 
-
+new:boolean;
 
 
 
@@ -87,6 +98,9 @@ id= Number(localStorage.getItem("id"));
 newReqObj: any;
 
 myObject:IncomingRequest;
+myObject2:BookingList;
+myObject3:BookingList;
+
 
 constructor(private storageService:StorageService,
   private router:Router,
@@ -115,26 +129,19 @@ if(this.myObject.status){
   this.newReq = true;
 }
     })
-    
-this.booking = {
-  date_booked:new Date(),
-  ref_code:null,
-  pickup:this.myObject.pickup,
-  dropup:this.myObject.dropup,
-  status:'pending',
-  fare:this.myObject.fare,
-}
 
-this.service.addNewBooking(this.booking).subscribe()
+    this.service.getActiveBookingList().subscribe((abc:BookingList)=>{this.myObject3=abc
+      this.new=true;
+      
 
-
+    })
 }
 
 
 submit(){
-  console.log("aggggggeeeeeeeeee")
   console.log(this.myObject)
-  console.log("poreeeeeeeeee")
+this.id= Number(localStorage.getItem("id"));
+console.log('id---1', this.id);
 
 }
 
@@ -142,6 +149,31 @@ submit(){
 confirm(){
   this.service.setRequestFalse(this.myObject.id).subscribe();
   this.service.setTaxiFalse(this.id).subscribe();
+  
+  console.log('id---2', this.id);
+
+  this.myObject2 = {
+    id:null,
+    date_booked:new Date(),
+    ref_code:Math.floor(Math.random() * (99999999 - 10000000 + 1)) + 10000000,
+    pickup:this.myObject.pickup,
+    dropup:this.myObject.dropup,
+    status:'pending',
+    fare:this.myObject.fare,
+    state:null
+  }
+
+  this.service.addNewBooking(this.myObject2).subscribe()
+
+
+  localStorage.removeItem("id");
+}
+
+
+
+
+
+
 }
 
 
@@ -150,24 +182,24 @@ confirm(){
 
 
 
-buttonColor = 'white';
+// buttonColor = 'white';
 
-togglePopup() {
-  this.myObject.status = !this.myObject.status;
-  this.buttonColor = this.myObject.status ? 'red' : 'white';
-}
+// togglePopup() {
+//   this.myObject.status = !this.myObject.status;
+//   this.buttonColor = this.myObject.status ? 'red' : 'white';
+// }
 
-showForm() {
-  // Handle showing the form and performing any other necessary actions
-  // You can use a separate flag or method to control the form visibility
-  // For example:
-  // this.showFormFlag = true;
-  // Or trigger a modal or dialog component to display the form
-  // based on your preferred approach.
-  // Reset the button color to white after showing the form:
-  this.buttonColor = 'white';
-}
-}
+// showForm() {
+//   // Handle showing the form and performing any other necessary actions
+//   // You can use a separate flag or method to control the form visibility
+//   // For example:
+//   // this.showFormFlag = true;
+//   // Or trigger a modal or dialog component to display the form
+//   // based on your preferred approach.
+//   // Reset the button color to white after showing the form:
+//   this.buttonColor = 'white';
+// }
+
 
 
 

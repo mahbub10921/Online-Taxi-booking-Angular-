@@ -60,6 +60,7 @@ this.Form = new FormGroup({
   fare:new FormControl((this.post1.fair  * this.distance2).toFixed(2))
 })
 
+console.log('id----',this.post1.id );
 localStorage.setItem("id", String(this.post1.id))
 
 }
