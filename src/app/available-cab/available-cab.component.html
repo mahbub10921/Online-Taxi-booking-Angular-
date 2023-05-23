@@ -60,7 +60,7 @@
                 <table class="table">
                   <thead>
                     
-                    <tr class="bg-gradient-dark">
+                    <tr style="border: 0;">
                       <th class="text-center">Cab Registration No</th>
                       <th class="text-center">Cab Model</th>
                       <th class="text-center">Category</th>
@@ -73,7 +73,7 @@
                   </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let v of post">
+                    <tr *ngFor="let v of post" style="border: 0;">
                       <td style="text-align: center;">{{v.registration}}</td>
                       <td style="text-align: center;">{{v.model}}</td>
                       <td style="text-align: center;">{{v.category}}</td>
@@ -154,11 +154,11 @@
           <form [formGroup]="Form" >
             <div class="form-group" >
               <label for="recipient-name" class="col-form-label">Pickup Point</label>
-              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{Pick}}">
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{Pick}}" disabled>
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Dropup Point</label>
-              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{drop}}">
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{drop}}" disabled> 
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Registration No.</label>
@@ -166,7 +166,7 @@
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Car Category</label>
-              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" formControlName="category">
+              <input type="text"  class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" formControlName="category">
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Driver Name</label>

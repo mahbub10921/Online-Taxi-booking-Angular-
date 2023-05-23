@@ -45,14 +45,7 @@ booking:any={
   state:null
 }
 
-hobe(id:number){
-  
-  this.idd=id
-  console.log("eitai" + this.idd);
-  
-  this.service.setDriverBookingFalse(this.idd).subscribe()
 
-}
 
 
 
@@ -87,7 +80,7 @@ private updateSubscription: Subscription;
 newReq:boolean = false;
 reqQuent:number = 0;
 
-new:boolean;
+new:boolean=false;
 
 
 
@@ -111,7 +104,9 @@ constructor(private storageService:StorageService,
   ngOnInit(): void {
     
     this.updateSubscription = interval(5000).subscribe(val =>{
-      this.getData()})
+      this.getData()
+      
+    })
   }
 
   getData(){
@@ -130,12 +125,33 @@ if(this.myObject.status){
 }
     })
 
+
+
+
     this.service.getActiveBookingList().subscribe((abc:BookingList)=>{this.myObject3=abc
+      this.new = false;
+
+      if(this.myObject3.state){
+        console.log('tttttttttttt');
+        
+      
+        
+        this.new = true;
+      }
+
+
        })
 
-       if(this.myObject3.state){
-        this.new = true;
-       }
+
+
+
+
+
+      //  if(this.myObject3.state){
+      //   this.new = true;
+      //  }else{
+      //   this.new = false;
+      //  }
 }
 
 
@@ -170,9 +186,19 @@ confirm(){
   localStorage.removeItem("id");
 }
 
-dropup(){
+ruhul:DoubleRange;
+
+dropup(id:number){
   
+  this.idd=id
+  console.log("eitai" + this.idd);
+  
+  this.service.setDriverBookingFalse(this.idd).subscribe()
+this.service.getFair(this.myObject3.fare).subscribe((abc:any)=>{this.ruhul=abc});
 }
+
+
+
 
 
 

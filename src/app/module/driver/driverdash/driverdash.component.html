@@ -1,7 +1,7 @@
 <div class="main">
-    <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Total Earnings <br> 80,000tk</div>
-    <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Pending Earning <br> 800tk</div>
-    <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;">Total Trip <br> 30</div>
+    <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Total Earnings <br> {{ruhul}} </div>
+    <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Pending Earning <br> 0 </div>
+    <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;">Total Trip <br>  0 </div>
     <!-- <button class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;border-radius: 10px;" [ngStyle]="{'background-color': newReq ? 'red' : 'white'}" data-target="#exampleModalCenter" data-toggle="modal" (click)="submit()">Incoming Request</button> -->
     <button type="button" [ngClass]="{'blink-button': newReq}" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;margin-top:30px ;" data-target="#exampleModalCenter" data-toggle="modal" (click)="submit()">Incoming Request</button>
 
@@ -235,7 +235,7 @@
               <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{myObject3.fare}}">
             </div>
             <div class="form-group">
-              <label for="recipient-name" class="col-form-label">Fare</label>
+              <label for="recipient-name" class="col-form-label">Status</label>
               <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{myObject3.status}}" disabled>
             </div>
            
@@ -244,7 +244,7 @@
         </div>
         <div class="modal-footer">
           <!-- <button type="button" class="btn btn-secondary" >C</button> -->
-          <button type="button" class="btn btn-primary" (click)="hobe(myObject3.id)">Drop off</button>
+          <button type="button" class="btn btn-primary" (click)="dropup(myObject3.id)">Drop off</button>
         </div>
       </div>
     </div>
