@@ -1,12 +1,22 @@
 <div class="div">
     <img src="assets\Dako-Logo.png" height="90px" width="180px">
-    <div class="divin" style="font-size: 20px;">Driver DashBoard</div>
-
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
     <div style="flex: 1;"></div>
-    <div class="divin" style="font-size: 2rem;" >Welcome &nbsp; {{title1}}</div>
-    <a href="#about" (click)="logout()" style="margin-right: 5px;"> <img src="assets\logout-rounded.png" alt=""> <b>Logout</b> </a> 
-    <div style="position: absolute;top: 78px;background: rgb(255, 255, 255);height:7px; width:60px;left: 150px; "></div>
-
+    <div>
+    <li class="nav-item dropdown" style="margin-right: 10px;margin-bottom: 5px;">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 20px;text-align: center;">
+        <b>Mahbubul Haque </b>  
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </div>
 </div>
 <div style="position: absolute;top: 71px;background: rgb(255, 255, 255);height:7px; width:60px;left: 140px; "></div>
 

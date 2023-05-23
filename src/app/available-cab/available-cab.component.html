@@ -8,10 +8,9 @@
 
 <h4 style="text-align: center;">{{drop}}</h4>
 
-<!-- <h4 style="text-align: center;color: brown;"> <b> {{Pick}} &nbsp; to &nbsp; {{drop}} </b>  </h4> -->
             </div>
             <div class="card-body">
-                <table class="table table-striped table-bordered table-hover">
+                <!-- <table class="table table-striped table-bordered table-hover">
                     <colgroup>
                         <col width="5%">
                         <col width="15%">
@@ -39,7 +38,6 @@
                         <td style="text-align: center;">{{v.category}}</td>
 
                         <td style="text-align: center;">{{v.driver.name}}</td>
-                        <!-- <td style="text-align: center;">BDT. {{v.category==="4 seat"?fairX:fairXL}} Tk</td> -->
                         <td style="text-align: center;"> {{(v.fair * this.distance2).toFixed(2)}} &nbsp; Tk.</td>
 
 
@@ -52,7 +50,55 @@
                     </tr>
                  
                 
+                </table> -->
+
+
+
+
+
+
+                <table class="table">
+                  <thead>
+                    
+                    <tr class="bg-gradient-dark">
+                      <th class="text-center">Cab Registration No</th>
+                      <th class="text-center">Cab Model</th>
+                      <th class="text-center">Category</th>
+                      <th class="text-center">Driver Name</th>
+
+                      <th class="text-center">Fare</th>
+                      <th class="text-center">Action</th>
+
+
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let v of post">
+                      <td style="text-align: center;">{{v.registration}}</td>
+                      <td style="text-align: center;">{{v.model}}</td>
+                      <td style="text-align: center;">{{v.category}}</td>
+
+                      <td style="text-align: center;">{{v.driver.name}}</td>
+                      <td style="text-align: center;"> {{(v.fair * this.distance2).toFixed(2)}} &nbsp; Tk.</td>
+
+
+
+                     
+ <td style="text-align: center;">
+
+                          <button type="button" (click)="show(v)"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"  style="color: black;" >Go</button></td> 
+
+                  </tr>
+                
+                  </tbody>
                 </table>
+
+
+
+
+
+
+
             </div>  
         </div>
     </div>

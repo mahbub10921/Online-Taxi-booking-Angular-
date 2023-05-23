@@ -131,10 +131,11 @@ if(this.myObject.status){
     })
 
     this.service.getActiveBookingList().subscribe((abc:BookingList)=>{this.myObject3=abc
-      this.new=true;
-      
+       })
 
-    })
+       if(this.myObject3.state){
+        this.new = true;
+       }
 }
 
 
@@ -169,7 +170,9 @@ confirm(){
   localStorage.removeItem("id");
 }
 
-
+dropup(){
+  
+}
 
 
 

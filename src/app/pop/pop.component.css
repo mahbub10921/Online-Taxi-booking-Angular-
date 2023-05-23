@@ -154,3 +154,41 @@
 .blink-button {
   animation: blink-animation 1s infinite;
 }
+
+
+
+
+.table-container {
+  margin: 50px auto;
+  width: 70%;
+  padding: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 1px 3px 0px #000;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* table tr:nth-of-type(even) {
+  background-color: #eee;
+} */
+.table tr:hover {
+  border-width: 6px;
+  background: #024704;
+  color: aliceblue;
+}
