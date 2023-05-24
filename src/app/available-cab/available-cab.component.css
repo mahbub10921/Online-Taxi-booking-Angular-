@@ -15,3 +15,40 @@
     margin-left: 10px;
     border-radius: 2px;
 }
+
+
+
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+    background-color: #ffffff;
+    color: #000000;
+    /* box-shadow: 0 1px 3px 0px #000; */
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  table tr:nth-of-type(even) {
+    background-color: #eee;
+  }
+  .table tr button:hover {
+    border-width: 6px;
+    background: #024704;
+    color: aliceblue;
+    transition: .5s;
+  }
+
