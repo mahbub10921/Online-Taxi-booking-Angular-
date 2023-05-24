@@ -18,8 +18,11 @@
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d8261636b6e9668e31212cabaf33de1dba9da8a1
 table {
     border-collapse: collapse;
     width: 100%;
@@ -41,6 +44,16 @@ table {
     font-weight: bold;
     text-align: center;
   }
+<<<<<<< HEAD
+=======
+
+  table tr {
+    
+        height: 70px;
+        border: 0;
+      
+  }
+>>>>>>> d8261636b6e9668e31212cabaf33de1dba9da8a1
   
   table tr:nth-of-type(even) {
     background-color: #eee;
@@ -51,4 +64,7 @@ table {
     color: aliceblue;
     transition: .5s;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d8261636b6e9668e31212cabaf33de1dba9da8a1

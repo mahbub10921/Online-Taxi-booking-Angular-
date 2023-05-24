@@ -131,6 +131,9 @@ return this.httpservice.get(this.URL + '/booking/' + id )
   }
 
 
+  getFair(fare:DoubleRange){
+return this.httpservice.get(this.URL + '/getFare' + '?fare=' + fare);
+  }
 
   
 
