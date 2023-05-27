@@ -7,6 +7,10 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { IncomingRequest } from '../inter/request';
 import { Subscription, interval } from 'rxjs';
 
+
+
+
+
 @Component({
   selector: 'app-available-cab',
   templateUrl: './available-cab.component.html',
@@ -57,7 +61,7 @@ this.Form = new FormGroup({
   company: new FormControl(this.post1.company),
   category: new FormControl(this.post1.category),
   driver:new FormControl(this.post1.driver.name),
-  fare:new FormControl((this.post1.fair  * this.distance2).toFixed(2))
+  fare:new FormControl((this.post1.fair  * this.distance2).toFixed(0))
 })
 
 console.log('id----',this.post1.id );
@@ -168,8 +172,8 @@ ngOnInit(): void {
       // this.Form.setValue(this.post);
    
     });
-this.subscription = interval(3000).subscribe(val => {this.getData()
-})
+// this.subscription = interval(3000).subscribe(val => {this.getData()
+// })
 
   }
 

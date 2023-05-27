@@ -3,7 +3,7 @@
 
     <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Pending Earning <br> 0 </div>
     <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;">Total Trip <br>  0 </div>
-        <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Total Earnings <br> {{ruhul}} </div>
+        <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Total Earnings <br>{{driverEarnings.earnings}}</div>
 
   </div>
 
@@ -74,7 +74,7 @@
                 <table class="table table-hover tab">
                   <thead>
                     <tr style="height:30%">
-                      <th scope="col" style="text-align: center;">#</th>
+                      <!-- <th scope="col" style="text-align: center;">#</th> -->
                       <th scope="col" style="text-align: center;">Date Booked</th>
                       <th scope="col" style="text-align: center;">Ref No.</th>
                       <th scope="col" style="text-align: center;">Pickup</th>
@@ -85,22 +85,20 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr [ngClass]="{'blink-button2': new}">
-                      <th scope="row" style="text-align: center;">1</th>
+                    <tr [ngClass]="{'blink-button2': new}" >
                       <td style="text-align: center;">{{myObject3.date_booked}}</td>
-                      <td style="text-align: center;">{{myObject3.ref_code}}</td>
+                      <td style="text-align: center;">{{myObject3.Ref_code}}</td>
                       <td style="text-align: center;">{{myObject3.pickup}}</td>
-                      <td style="text-align: center;">{{myObject3.drop}}</td>
+                      <td style="text-align: center;">{{myObject3.dropup}}</td>
                       <td style="text-align: center;">{{myObject3.status}}</td>
                       <td style="text-align: center;"  data-target="#exampleModalCenter2" data-toggle="modal"  ><button style="width: 60%">View Details</button></td>
                     </tr>
                     <tr *ngFor="let v of booking1">
-                      <th scope="row" style="text-align: center;">2</th>
 
                     <td style="text-align: center;">{{v.date_booked}}</td>
-                    <td style="text-align: center;">{{v.ref_code}}</td>
+                    <td style="text-align: center;">{{v.Ref_code}}</td>
                     <td style="text-align: center;">{{v.pickup}}</td>
-                    <td style="text-align: center;">{{v.drop}}</td>
+                    <td style="text-align: center;">{{v.dropup}}</td>
                     <td style="text-align: center;">{{v.status}}</td>
                     <td style="text-align: center;"><button style="width: 60%">View Details</button></td>
                     </tr>
@@ -115,11 +113,6 @@
                     </tr> -->
                   </tbody>
                 </table>
-
-
-
-
-
 
 
 
@@ -160,13 +153,21 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">Confirm Booking</h5>
+          <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">Booking Details</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <form  >
+            <div class="form-group" >
+              <label for="recipient-name" class="col-form-label">Client Name</label>
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="Md.Kamrul Hasan">
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Phone</label>
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="01537263505">
+            </div>
             <div class="form-group" >
               <label for="recipient-name" class="col-form-label">Pickup Point</label>
               <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{myObject.pickup}}">
@@ -215,7 +216,7 @@
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Dropup Point</label>
-              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{myObject3.drop}}">
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{myObject3.dropup}}">
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Fare</label>

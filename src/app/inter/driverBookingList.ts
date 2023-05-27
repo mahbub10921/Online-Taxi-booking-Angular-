@@ -1,7 +1,7 @@
 export interface BookingList{
     id:number;
     date_booked:Date;
-    ref_code:number;
+    Ref_code:number;
     pickup:string;
     dropup:string;
     status:string;
