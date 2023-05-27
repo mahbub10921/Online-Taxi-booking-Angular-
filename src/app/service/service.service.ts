@@ -6,6 +6,7 @@ import { Driver } from '../inter/driver';
 import { Route } from '../inter/route';
 import { IncomingRequest } from '../inter/request';
 import { BookingList } from '../inter/driverBookingList';
+import { DriverEarnings } from '../inter/driverEarnings';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -187,9 +188,16 @@ getActiveBookingList(){
     const task1 = this.httpservice.get<Driver[]>(this.URL + '/driver')
     return task1;
 
-
-
-
   }
+
+getEarnings(id:number){
+  return this.httpservice.get<DriverEarnings>(this.URL + '/getFar/' + id)
+}
+
+getBooked(){
+  return this.httpservice.get<BookingList[]>(this.URL + '/getOnlyBooked')
+}
+
+  
 
 }

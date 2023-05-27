@@ -7,6 +7,7 @@ import { ServiceService } from 'src/app/service/service.service';
 import { StorageService } from 'src/app/loginService/storage.service';
 import { data } from 'jquery';
 import { BookingList } from 'src/app/inter/driverBookingList';
+import { DriverEarnings } from 'src/app/inter/driverEarnings';
 
 @Component({
   selector: 'app-driverdash',
@@ -34,6 +35,9 @@ idd:number;
 
 
 
+booking1:BookingList[];
+
+
 booking:any={
   id:null,
   date_booked:null,
@@ -45,6 +49,7 @@ booking:any={
   state:null
 }
 
+driverEarnings:DriverEarnings;
 
 
 
@@ -102,6 +107,8 @@ constructor(private storageService:StorageService,
 
 }
   ngOnInit(): void {
+     this.service.getBooked().subscribe((abc:BookingList[])=>{this.booking1=abc})
+
     
     this.updateSubscription = interval(5000).subscribe(val =>{
       this.getData()
@@ -147,11 +154,7 @@ if(this.myObject.status){
 
 
 
-      //  if(this.myObject3.state){
-      //   this.new = true;
-      //  }else{
-      //   this.new = false;
-      //  }
+    
 }
 
 
@@ -173,7 +176,7 @@ confirm(){
     date_booked:new Date(),
     ref_code:Math.floor(Math.random() * (99999999 - 10000000 + 1)) + 10000000,
     pickup:this.myObject.pickup,
-    dropup:this.myObject.dropup,
+    drop:this.myObject.dropup,
     status:'pending',
     fare:this.myObject.fare,
     state:null
@@ -195,8 +198,8 @@ dropup(id:number){
   this.service.setDriverBookingFalse(this.idd).subscribe()
 this.service.getFair(this.myObject3.fare).subscribe((abc:any)=>{this.ruhul=abc});
 this.service.setTaxiTrue(this.id).subscribe();
-
-
+this.service.getEarnings(1).subscribe((abc:DriverEarnings)=>{this.driverEarnings=abc})
+// this.service.getBooked().subscribe((abc:BookingList[])=>{this.booking1=abc})
 
 }
 

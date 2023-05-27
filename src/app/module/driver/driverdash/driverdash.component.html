@@ -1,9 +1,9 @@
 <div class="main">
-    <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Total Earnings <br> {{ruhul}} </div>
+  <button type="button" [ngClass]="{'blink-button': newReq}" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;margin-top:30px ;" data-target="#exampleModalCenter" data-toggle="modal" (click)="submit()">Incoming Request</button>
+
     <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Pending Earning <br> 0 </div>
     <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;">Total Trip <br>  0 </div>
-    <!-- <button class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;border-radius: 10px;" [ngStyle]="{'background-color': newReq ? 'red' : 'white'}" data-target="#exampleModalCenter" data-toggle="modal" (click)="submit()">Incoming Request</button> -->
-    <button type="button" [ngClass]="{'blink-button': newReq}" style="height:70px ;width: 200px;box-sizing: border-box;padding: 20px;text-align: center;margin-top:30px ;" data-target="#exampleModalCenter" data-toggle="modal" (click)="submit()">Incoming Request</button>
+        <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Total Earnings <br> {{ruhul}} </div>
 
   </div>
 
@@ -74,48 +74,45 @@
                 <table class="table table-hover tab">
                   <thead>
                     <tr style="height:30%">
-                      <th scope="col">#</th>
-                      <th scope="col">Date Booked</th>
-                      <th scope="col">Ref No.</th>
-                      <th scope="col">Pickup</th>
-                      <th scope="col">Dropup</th>
-                      <th scope="col">Status</th>
-                      <th scope="col">Action</th>
+                      <th scope="col" style="text-align: center;">#</th>
+                      <th scope="col" style="text-align: center;">Date Booked</th>
+                      <th scope="col" style="text-align: center;">Ref No.</th>
+                      <th scope="col" style="text-align: center;">Pickup</th>
+                      <th scope="col" style="text-align: center;">Dropup</th>
+                      <th scope="col" style="text-align: center;">Status</th>
+                      <th scope="col" style="text-align: center;">Action</th>
 
                     </tr>
                   </thead>
                   <tbody>
                     <tr [ngClass]="{'blink-button2': new}">
-                      <th scope="row">1</th>
-                      <td style="text-align: center;">{{1}}</td>
+                      <th scope="row" style="text-align: center;">1</th>
                       <td style="text-align: center;">{{myObject3.date_booked}}</td>
                       <td style="text-align: center;">{{myObject3.ref_code}}</td>
                       <td style="text-align: center;">{{myObject3.pickup}}</td>
-                      <td style="text-align: center;">{{myObject3.dropup}}</td>
+                      <td style="text-align: center;">{{myObject3.drop}}</td>
                       <td style="text-align: center;">{{myObject3.status}}</td>
                       <td style="text-align: center;"  data-target="#exampleModalCenter2" data-toggle="modal"  ><button style="width: 60%">View Details</button></td>
                     </tr>
-                    <tr>
-                      <th scope="row">3</th>
+                    <tr *ngFor="let v of booking1">
+                      <th scope="row" style="text-align: center;">2</th>
 
-                      <td style="text-align: center;">2</td>
-                    <td style="text-align: center;">09-04-2022</td>
-                    <td style="text-align: center;">746-674</td>
-                    <td style="text-align: center;">Motijheel</td>
-                    <td style="text-align: center;">Banani</td>
-                    <td style="text-align: center;">status</td>
+                    <td style="text-align: center;">{{v.date_booked}}</td>
+                    <td style="text-align: center;">{{v.ref_code}}</td>
+                    <td style="text-align: center;">{{v.pickup}}</td>
+                    <td style="text-align: center;">{{v.drop}}</td>
+                    <td style="text-align: center;">{{v.status}}</td>
                     <td style="text-align: center;"><button style="width: 60%">View Details</button></td>
                     </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td style="text-align: center;">3</td>
+                    <!-- <tr>
+                      <th scope="row" style="text-align: center;">3</th>
                   <td style="text-align: center;">09-04-2022</td>
                   <td style="text-align: center;">746-674</td>
                   <td style="text-align: center;">Motijheel</td>
                   <td style="text-align: center;">Banani</td>
                   <td style="text-align: center;">status</td>
                   <td style="text-align: center;"><button style="width: 60%">View Details</button></td>
-                    </tr>
+                    </tr> -->
                   </tbody>
                 </table>
 
@@ -218,7 +215,7 @@
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Dropup Point</label>
-              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{myObject3.dropup}}">
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{myObject3.drop}}">
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Fare</label>
