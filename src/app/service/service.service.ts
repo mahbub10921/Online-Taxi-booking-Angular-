@@ -108,6 +108,12 @@ return this.httpservice.get(this.URL + '/booking/' + id )
     return this.httpservice.get(this.URL + '/cus/' + id)
    }
 
+  
+   setTaxiTrue(id: number){
+    return this.httpservice.get(this.URL + '/updateCustom2/' + id)
+   }
+
+
    
    setTaxiFalse(id: number){
     return this.httpservice.get(this.URL + '/updateCustom/' + id)

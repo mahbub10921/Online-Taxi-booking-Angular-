@@ -109,7 +109,7 @@
 
 
 
-.transition-button {
+/* .transition-button {
    transition: 1s ; 
   margin: 10px, 60px;
 }
@@ -120,7 +120,7 @@
 
 .transition-button:active {
   background-color: #3e8e41;
-}
+} */
 
 /* .transition-button:focus {
   outline: none;
@@ -162,9 +162,14 @@
   margin: 50px auto;
   width: 70%;
   padding: 10px;
+} 
+
+.tab{
+  width: 100%;
+    margin: auto;
 }
 
-table {
+/* table {
   border-collapse: collapse;
   width: 90%;
   margin: auto;
@@ -182,13 +187,50 @@ table td {
 table th {
   background-color: #f0f0f0;
   font-weight: bold;
-}
+} */
 
 /* table tr:nth-of-type(even) {
   background-color: #eee;
 } */
-.table tr:hover {
+/* .table tr:hover {
   border-width: 6px;
   background: #024704;
   color: aliceblue;
 }
+ */ */
+
+
+
+
+
+.modal {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 700px;
+  height:400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.modal-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+/* .modal-footer {
+  padding: 10px;
+  text-align: right;
+} */

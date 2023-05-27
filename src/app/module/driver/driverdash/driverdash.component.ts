@@ -159,7 +159,6 @@ submit(){
   console.log(this.myObject)
 this.id= Number(localStorage.getItem("id"));
 console.log('id---1', this.id);
-
 }
 
 
@@ -195,6 +194,10 @@ dropup(id:number){
   
   this.service.setDriverBookingFalse(this.idd).subscribe()
 this.service.getFair(this.myObject3.fare).subscribe((abc:any)=>{this.ruhul=abc});
+this.service.setTaxiTrue(this.id).subscribe();
+
+
+
 }
 
 

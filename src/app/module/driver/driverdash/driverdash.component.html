@@ -15,84 +15,10 @@
                 <h4 class="card-title" style="color: rgb(63, 5, 118);">My Booking List</h4>
             </div>
             <div class="card-body">
-                <!-- <table class="table table-striped table-bordered table-hover">
-                    <colgroup>
-                        <col width="5%">
-                        <col width="15%">
-                        <col width="15%">
-                        <col width="30%">
-                        <col width="10%">
-                        <col width="15%">
-                    </colgroup>
-                    <thead>
-                        <tr class="bg-gradient-dark">
-                            <th class="text-cente">#</th>
-                            <th class="text-center">Date Booked</th>
-                            <th class="text-center">Ref. Code</th>
-                            <th class="text-center">Pickup</th>
-                            <th class="text-center">Dropup</th>
-
-                            <th class="text-center">Status</th>
-                            <th class="text-center">Action</th>
-                        </tr>
-                    </thead>
-                    <tr [ngClass]="{'blink-button2': new}">
-                      
-                      <td style="text-align: center;">{{1}}</td>
-                      <td style="text-align: center;">{{myObject3.date_booked}}</td>
-                      <td style="text-align: center;">{{myObject3.ref_code}}</td>
-                      <td style="text-align: center;">{{myObject3.pickup}}</td>
-                      <td style="text-align: center;">{{myObject3.dropup}}</td>
-                      <td style="text-align: center;">{{myObject3.status}}</td>
-                      <td style="text-align: center;"  (click)="hobe(myObject3.id)"  ><button>Go</button></td>
+              
 
 
-                  </tr>
-                    <tr>
-                        <td style="text-align: center;">1</td>
-                        <td style="text-align: center;">12-04-2022</td>
-                        <td style="text-align: center;">123-674</td>
-                        <td style="text-align: center;">Agargaon</td>
-                        <td style="text-align: center;">Malibagh</td>
-                        <td style="text-align: center;">Booked</td>
-
-                    </tr>
-
-                    <tr>
-                        <td style="text-align: center;">2</td>
-                        <td style="text-align: center;">09-04-2022</td>
-                        <td style="text-align: center;">746-674</td>
-                        <td style="text-align: center;">Pickup:Motijheel <br> Dropup:Mirpur-10</td>
-                        <td style="text-align: center;">Dropped Off</td>
-                        <td style="text-align: center;">View Details</td>
-
-                    </tr>
-
-                    <tr>
-                        <td style="text-align: center;">3</td>
-                        <td style="text-align: center;">08-04-2022</td>
-                        <td style="text-align: center;">723-632</td>
-                        <td style="text-align: center;">Pickup:Mohhamadpur <br> Dropup:Khilgaon</td>
-                        <td style="text-align: center;">Dropped Off</td>
-                        <td style="text-align: center;">View Details</td>
-
-                    </tr>
-
-                    <tr>
-                        <td style="text-align: center;">4</td>
-                        <td style="text-align: center;">05-04-2022</td>
-                        <td style="text-align: center;">123-674</td>
-                        <td style="text-align: center;">Pickup:Agargaon <br> Dropup:Khilgaon</td>
-                        <td style="text-align: center;">Dropped Off</td>
-                        <td style="text-align: center;">View Details</td>
-
-                    </tr>
-                  
-                </table> -->
-
-
-
-                <table class="table">
+                <!-- <table class="table">
                   <thead>
                     <tr>
                       <th>#</th>
@@ -142,7 +68,62 @@
 
               </tr>
                   </tbody>
+                </table> -->
+
+
+                <table class="table table-hover tab">
+                  <thead>
+                    <tr style="height:30%">
+                      <th scope="col">#</th>
+                      <th scope="col">Date Booked</th>
+                      <th scope="col">Ref No.</th>
+                      <th scope="col">Pickup</th>
+                      <th scope="col">Dropup</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr [ngClass]="{'blink-button2': new}">
+                      <th scope="row">1</th>
+                      <td style="text-align: center;">{{1}}</td>
+                      <td style="text-align: center;">{{myObject3.date_booked}}</td>
+                      <td style="text-align: center;">{{myObject3.ref_code}}</td>
+                      <td style="text-align: center;">{{myObject3.pickup}}</td>
+                      <td style="text-align: center;">{{myObject3.dropup}}</td>
+                      <td style="text-align: center;">{{myObject3.status}}</td>
+                      <td style="text-align: center;"  data-target="#exampleModalCenter2" data-toggle="modal"  ><button style="width: 60%">View Details</button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+
+                      <td style="text-align: center;">2</td>
+                    <td style="text-align: center;">09-04-2022</td>
+                    <td style="text-align: center;">746-674</td>
+                    <td style="text-align: center;">Motijheel</td>
+                    <td style="text-align: center;">Banani</td>
+                    <td style="text-align: center;">status</td>
+                    <td style="text-align: center;"><button style="width: 60%">View Details</button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td style="text-align: center;">3</td>
+                  <td style="text-align: center;">09-04-2022</td>
+                  <td style="text-align: center;">746-674</td>
+                  <td style="text-align: center;">Motijheel</td>
+                  <td style="text-align: center;">Banani</td>
+                  <td style="text-align: center;">status</td>
+                  <td style="text-align: center;"><button style="width: 60%">View Details</button></td>
+                    </tr>
+                  </tbody>
                 </table>
+
+
+
+
+
+
 
 
 
@@ -154,22 +135,31 @@
 
 
 
-<!-- <div *ngIf="request.status" class="popup-container">
-    <div class="popup">
-       Popup content 
-      <h2>{{ request }}</h2>
-      <p>{{ request}}</p>
-      <button (click)="closePopup()">Close Popup</button>
-    </div>
-  </div>
+
+
+
+
+
   
-  <button (click)="openPopup()">Open Popup</button> -->
 
 
 
 
 
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="position: absolute;top: 20px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="position: absolute;top: 20px;">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">

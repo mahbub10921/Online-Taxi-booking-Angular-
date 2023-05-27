@@ -111,7 +111,7 @@ list:any={
 
 submit(){
   console.log("hello")
-this.list={id:null,pickup:this.Pick, dropup:this.drop, fare:(this.post1.fair * this.distance2).toFixed(2),status:null}
+this.list={id:null,pickup:this.Pick, dropup:this.drop, fare:(this.post1.fair * this.distance2).toFixed(0),status:null}
  this.Request = this.list 
 console.log("age")
  console.log(this.Request )
