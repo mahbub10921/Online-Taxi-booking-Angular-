@@ -14,3 +14,42 @@
 
 
 </div> -->
+
+
+<nav class="navbar">
+    <div class="navbar-brand">
+      <span class="navbar-logo">Your Logo</span>
+    </div>
+    <button class="navbar-toggle" (click)="toggleSidebar()">Toggle
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+  
+  <!-- Sidebar -->
+  <div class="sidebar" [ngClass]="{ 'sidebar-open': isSidebarOpen }">
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link">
+          <i class="fas fa-home"></i>
+          <span class="sidebar-text">Home</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link">
+          <i class="fas fa-user"></i>
+          <span class="sidebar-text">Profile</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link">
+          <i class="fas fa-cog"></i>
+          <span class="sidebar-text">Settings</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Your content goes here -->
+  </div>

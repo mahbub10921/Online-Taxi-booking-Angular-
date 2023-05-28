@@ -29,9 +29,7 @@ export class DriverdashComponent {
   title1 = "Motaleb"
   idd: number;
 
-  // url = 'http://localhost:8080/websocket'
-  // client: any;
-  // greeting: string[] = [];
+
 
 
 
@@ -82,12 +80,13 @@ export class DriverdashComponent {
   newReqObj: any;
 
   myObject: IncomingRequest = {
-    id: null,
-
-    pickup: "",
-    dropup: "",
-    fare: null,
-    status: null
+    id: 0,
+    pickup: '',
+    dropup: '',
+    fare: 0,
+    status: true,
+    clientName: '',
+    phone: ''
 
   };
   myObject2: BookingList;
@@ -207,12 +206,15 @@ export class DriverdashComponent {
     this.service.getFair(this.myObject3.fare).subscribe((abc: any) => { this.ruhul = abc });
     this.service.setTaxiTrue(this.id).subscribe();
     this.ngOnInit();
+    this.reloadPage();
     // this.service.getEarnings(1).subscribe((abc: DriverEarnings) => { this.driverEarnings = abc })
     console.log(this.driverEarnings.earnings)
   }
 
 
-
+  reloadPage() {
+    window.location.reload();
+  }
 
 
 

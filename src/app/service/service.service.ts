@@ -142,7 +142,15 @@ return this.httpservice.get(this.URL + '/booking/' + id )
 return this.httpservice.get(this.URL + '/getFare' + '?fare=' + fare);
   }
 
-  
+  getUser(user:string):Observable<string>{
+    console.log('ashraf--' + user);
+    // console.log(this.httpservice.get(this.URL + '/getuser' + '?username=' + user));
+    return this.httpservice.get(this.URL + '/getuser?username=' + user, { responseType: 'text' });
+      }
+
+
+
+
 
 
 

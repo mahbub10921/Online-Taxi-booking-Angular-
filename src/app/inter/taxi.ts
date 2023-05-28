@@ -9,6 +9,7 @@ export interface Taxi{
     company:string;
     category:string;
     fair:number;
+    imagePath:string;
     driver:Driver;
 }
 

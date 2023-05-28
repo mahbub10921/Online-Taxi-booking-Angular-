@@ -62,7 +62,6 @@
                     <th class="text-center" scope="col">Cab Model</th>
                     <th class="text-center" scope="col">Category</th>
                     <th class="text-center" scope="col">Driver Name</th>
-
                     <th class="text-center" scope="col">Fare</th>
                     <th class="text-center" scope="col">Action</th>
 
@@ -74,7 +73,9 @@
                       <td style="text-align: center;">{{v.model}}</td>
                       <td style="text-align: center;">{{v.category}}</td>
 
-                      <td style="text-align: center;">{{v.driver.name}}</td>
+                      <td style="text-align: center;"> <img [src]="v.imagePath" alt=""  height="40px" width="40px">    <br> {{v.driver.name}}
+                      </td>
+
                       <td style="text-align: center;"> {{(v.fair * this.distance2).toFixed(0)}} &nbsp; Tk.</td>
 
 
@@ -162,19 +163,19 @@
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Registration No.</label>
-              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);"  [disabled]="true" formControlName="registration">
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);"   formControlName="registration">
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Car Category</label>
-              <input type="text"  class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" [disabled]="true" formControlName="category">
+              <input type="text"  class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);"  formControlName="category">
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Driver Name</label>
-              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" [disabled]="true" formControlName="driver">
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" formControlName="driver">
             </div>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Fair</label>
-              <input type="text" class="form-control" id="recipient-name" value="" style="color: rgb(29, 3, 54);" [disabled]="true" formControlName="fare">
+              <input type="text" class="form-control" id="recipient-name" value="" style="color: rgb(29, 3, 54);"  formControlName="fare">
             </div>
           </form>
         </div>

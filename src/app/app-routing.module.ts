@@ -19,7 +19,7 @@ import { PopComponent } from './pop/pop.component';
 import { Pop2Component } from './pop2/pop2.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component:   LoginComponent},
   { path: 'home', component: HomeComponent },
   { path: 'bookingform', component: BookingformComponent },
   { path: 'pop', component: PopComponent },

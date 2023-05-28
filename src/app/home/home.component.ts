@@ -49,6 +49,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.username = localStorage.getItem("name");
+    console.log('raj------' + this.username);
+
+
+
+
     this.service.getRoute().subscribe((abc: Route[]) => { this.List = abc })
 
     this.form = new FormGroup({

@@ -39,5 +39,27 @@ export class PopComponent implements OnInit {
 
 
 
+  isSidebarOpen = false;
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+
+
+
+   w3_open() {
+    document.getElementById("mySidebar").style.width = "100%";
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  
+   w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+
+
+
+
+
+
 }
 

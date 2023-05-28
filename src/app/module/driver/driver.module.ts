@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DriverRoutingModule } from './driver-routing.module';
 import { DriverdashComponent } from './driverdash/driverdash.component';
@@ -17,6 +18,8 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   imports: [
     CommonModule,
     DriverRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     // BrowserAnimationsModule
   ]
 })

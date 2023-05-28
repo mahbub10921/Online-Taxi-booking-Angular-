@@ -52,10 +52,10 @@ export class LoginComponent {
       }
 
 
-      // if (this.roles.some(item => item.roleName === 'User')) {
-      //   this.router.navigateByUrl('/home')
-      //   this.isNab = false;
-      // }
+      if (this.roles.some(item => item.roleName === 'User')) {
+        this.router.navigateByUrl('/home')
+        this.isNab = false;
+      }
 
 
       if (this.roles.some(item => item.roleName === 'Driver')) {
@@ -89,9 +89,7 @@ export class LoginComponent {
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().role;
 
-        // const user = this.storageService.getUser();
-
-        // console.log("user-----",user)
+        
 
         this.username = this.storageService.getUser().userName;
 console.log('ttttttttttttttt',this.roles);
@@ -100,6 +98,19 @@ console.log('ttttttttttttttt',this.roles);
           this.router.navigateByUrl('/admin')
           this.isNab = false;
         }
+
+
+        if (this.roles.some(item => item.roleName === 'User')) {
+          this.router.navigateByUrl('home')
+          this.username = this.form.username
+          localStorage.setItem("name", this.username)
+          this.isNab = false;
+        }
+
+
+
+
+
   
         if (this.roles.some(item => item.roleName === 'Driver')) {
           this.router.navigateByUrl('/driver')

@@ -5,5 +5,7 @@ export interface IncomingRequest {
     dropup: string;
     fare:any;
     status:boolean;
+    clientName:string;
+    phone:string
   }
   
