@@ -37,7 +37,22 @@ export class PopComponent implements OnInit {
 
   newReq:boolean = false;
 
+  rows = [
+    { column1: 'Data 1', column2: 'Data 2', column3: 'Data 3' },
+    // Add more rows here
+  ];
 
+  displayedRows = this.rows;
+
+  sortTable(column: string) {
+    // Implement the sorting logic based on the column
+    // Set the sorted rows to the displayedRows variable
+  }
+
+  changePageSize(pageSize: number) {
+    // Implement the logic to change the number of rows per page
+    // Update the displayedRows variable accordingly
+  }
 
   isSidebarOpen = false;
 
