@@ -6,6 +6,7 @@ export interface IncomingRequest {
     fare:any;
     status:boolean;
     clientName:string;
-    phone:string
+    phone:string;
+    driverName:string;
   }
   

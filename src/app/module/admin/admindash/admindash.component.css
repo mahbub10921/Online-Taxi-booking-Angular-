@@ -1,18 +1,23 @@
 .main{
+  top: 80px;
+  left: 500px;
   display: grid;
   grid-template-columns: auto auto auto auto ;
   column-gap: 20px;
   height: 300px;
-  width: 830px;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
   justify-items: center;
   /* background: whitesmoke; */
   border-radius: 2px;
-  margin-top: 30px;
+  border: 2px solid black;
+  position: absolute;
+  
 }
 .child{
+  position: relative;
   height:70px;
   width:220px;
   border: 1px solid #eee;
@@ -24,6 +29,7 @@
 color: white;
   box-shadow: inset 1px 1px 5px 5px#e8e6e6;
 font-size: 20px;
+
 }
 
 
@@ -37,7 +43,10 @@ font-size: 20px;
 
 
 .container {
-  margin-top: 20px;
+  
+  position: absolute;
+  top: 200px;
+  left: 500px;
 }
 
 table {

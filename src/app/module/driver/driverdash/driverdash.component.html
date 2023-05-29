@@ -26,27 +26,37 @@
                     <tr style="height:30%">
                       <!-- <th scope="col" style="text-align: center;">#</th> -->
                       <th scope="col" style="text-align: center;">Date Booked</th>
-                      <!-- <th scope="col" style="text-align: center;">Ref No.</th> -->
+                      <th scope="col" style="text-align: center;">Ref No.</th>
                       <th scope="col" style="text-align: center;">Pickup</th>
                       <th scope="col" style="text-align: center;">Dropup</th>
+                      <th scope="col" style="text-align: center;">Fare</th>
+
                       <th scope="col" style="text-align: center;">Status</th>
                       <th scope="col" style="text-align: center;">Action</th>
 
                     </tr>
                   </thead>
                   <tbody>
-                    <tr [ngClass]="{'blink-button2': new}" >
+                    <tr [ngClass]="{'blink-button2': new}"  *ngIf="myObject3!=null">
                       <td style="text-align: center;"  >   {{myObject3.date_booked}}   </td>
+                      <td style="text-align: center;"  >   {{myObject3.refCode}}   </td>
+
                       <td style="text-align: center;"  >   {{myObject3.pickup}}      </td> 
                       <td style="text-align: center;"  >   {{myObject3.dropup}}      </td>
+                      <td style="text-align: center;"  >   {{myObject3.fare}}      </td>
+
                       <td style="text-align: center;"  >   {{myObject3.status}}      </td>
                       <td style="text-align: center;"  (click)="dropup(myObject3.id)" ><button style="width: 60%">Dropup</button></td>
                     </tr>
-                    <tr *ngFor="let v of booking1">
+                    <tr *ngFor="let v of booking1" >
 
                     <td style="text-align: center;">{{v.date_booked}}</td>
+                    <td style="text-align: center;">{{v.refCode}}</td>
+
                     <td style="text-align: center;">{{v.pickup}}</td>
                     <td style="text-align: center;">{{v.dropup}}</td>
+                    <td style="text-align: center;">{{v.fare}}</td>
+
                     <td style="text-align: center;">{{v.status}}</td>
                     <td style="text-align: center;"><button style="width: 60%">View Details</button></td>
                     </tr>
@@ -99,23 +109,20 @@
           </button>
         </div>
         <div class="modal-body">
-          <form  [formGroup]="form">
+          <form   *ngIf="myObject!=null">
             <div class="form-group" >
               <label for="recipient-name" class="col-form-label">Client Name</label>
-              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" formControlName="clientName">
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" value="{{myObject.clientName}}">
             </div>
 
-            <!-- <div class="form-group" >
-              <label for="recipient-name" class="col-form-label">Client Name</label>
-              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);" [(ngModel)]="myObject.clientName" name="clientName" type="text" placeholder="Name" [value]="myObject.clientName">
-            </div> -->
+           
 
 
 
 
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Phone</label>
-              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);"  formControlName="phone">
+              <input type="text" class="form-control" id="recipient-name" style="color: rgb(29, 3, 54);"  value="{{myObject.phone}}">
             </div>
             <div class="form-group" >
               <label for="recipient-name" class="col-form-label">Pickup Point</label>

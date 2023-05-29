@@ -1,14 +1,11 @@
-export interface Details{
-    id:number,
+export interface Details {
 
-    carId:number,
-
-     date_booked:Date
-     Ref_code:number,
-    pickup:string,
-    dropup:string;
-     fare:number;
-     status:string;
-    percentage:DoubleRange;
+    id: number;
+    date_booked: Date,
+    refCode: number;
+    pickup: string,
+    dropup: string;
+    fare: number;
+    percentage: Number;
 
 }

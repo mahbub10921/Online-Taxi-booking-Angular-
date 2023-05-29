@@ -106,7 +106,8 @@ export class AvailableCabComponent implements OnInit{
     fare: null,
     status: null,
     clientName:null,
-    phone:null
+    phone:null,
+    driverName:null
   }
 
 
@@ -118,7 +119,7 @@ export class AvailableCabComponent implements OnInit{
 
   submit() {
     console.log("hello")
-    this.list = { id: null, pickup: this.Pick, dropup: this.drop, fare: (this.post1.fair * this.distance2).toFixed(0), status: null,clientName:this.username,phone:this.phone }
+    this.list = { id: null, pickup: this.Pick, dropup: this.drop, fare: (this.post1.fair * this.distance2).toFixed(0), status: null,clientName:this.username,phone:this.phone, driverName:this.post1.driver.name }
     this.Request = this.list
     console.log("age")
     console.log(this.Request)

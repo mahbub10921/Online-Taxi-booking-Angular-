@@ -1,11 +1,11 @@
 export interface BookingList{
     id:number;
     date_booked:Date;
-    Ref_code:number;
+    refCode:number;
     pickup:string;
     dropup:string;
     status:string;
-    fare:DoubleRange;
+    fare:number;
     state:boolean;
 
 }

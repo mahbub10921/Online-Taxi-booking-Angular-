@@ -1,19 +1,19 @@
-<div class="main">
+<!-- <div class="main">
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;" routerLink="/addcar">Add Car</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Available Car</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;" routerLink="/managecar" >Manage Car</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;" routerLink="/regiscar">Registered Car</div>
-    <!-- <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;" routerLink="/adddriver" >Add Driver</div>
+     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;" routerLink="/adddriver" >Add Driver</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Ongoing Trip</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Trip Completed</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Route Management</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Total Earning</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Pending Earning</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Manage Driver</div>
-    <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Registered Client</div> -->
+    <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Registered Client</div> 
 
 
-</div>
+</div> -->
 
 
 
@@ -22,16 +22,22 @@
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
+        <th>Date Booked</th>
+        <th>Pickup</th>
+        <th>Dropup</th>
+        <th>Fare</th>
+        <th>Percentage</th>
+
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of filteredItems">
-        <td>{{ item.name }}</td>
-        <td>{{ item.email }}</td>
-        <td>{{ item.phone }}</td>
+      <tr *ngFor="let item of detail">
+        <td>{{ item.date_booked }}</td>
+        <td>{{ item.pickup }}</td>
+        <td>{{ item.dropup}}</td>
+        <td>{{ item.fare}}</td>
+        <td>{{ item.percentage}}</td>
+
       </tr>
     </tbody>
   </table>

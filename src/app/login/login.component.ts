@@ -114,6 +114,9 @@ console.log('ttttttttttttttt',this.roles);
   
         if (this.roles.some(item => item.roleName === 'Driver')) {
           this.router.navigateByUrl('/driver')
+          this.username = this.form.username
+          localStorage.setItem("drivername", this.username)
+
           this.isNab = false;
         }
 

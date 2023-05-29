@@ -7,6 +7,7 @@ import { Route } from '../inter/route';
 import { IncomingRequest } from '../inter/request';
 import { BookingList } from '../inter/driverBookingList';
 import { DriverEarnings } from '../inter/driverEarnings';
+import { Details } from '../inter/details';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -47,6 +48,17 @@ saveRequest(save:IncomingRequest ){
       catchError(this.errorHandler)
     )
   }
+
+
+
+
+  saveDetails(detail:Details ){
+    console.log('ksgryerghdsgfghjsgf',detail)
+    return this.httpservice.post<Details>(this.URL + '/postDetails', JSON.stringify(detail), httpOptions).pipe(
+       catchError(this.errorHandler)
+     )
+   }
+ 
 
 
 
@@ -138,7 +150,7 @@ return this.httpservice.get(this.URL + '/booking/' + id )
   }
 
 
-  getFair(fare:DoubleRange){
+  getFair(fare:number){
 return this.httpservice.get(this.URL + '/getFare' + '?fare=' + fare);
   }
 
@@ -149,7 +161,10 @@ return this.httpservice.get(this.URL + '/getFare' + '?fare=' + fare);
       }
 
 
-
+      getDetails(){
+        return this.httpservice.get<Details[]>(this.URL +'/postDetail');
+          }
+        
 
 
 

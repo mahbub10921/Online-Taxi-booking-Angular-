@@ -13,7 +13,7 @@ import { ServiceService } from 'src/app/service/service.service';
   styleUrls: ['./driver.component.css']
 })
 export class DriverComponent implements OnInit {
-title1='Kamal'
+name:string = localStorage.getItem("drivername")
 
 // private updateSubscription: Subscription;
 

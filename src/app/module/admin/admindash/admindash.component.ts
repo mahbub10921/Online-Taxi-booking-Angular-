@@ -1,12 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Details } from 'src/app/inter/details';
+import { StorageService } from 'src/app/loginService/storage.service';
+import { ServiceService } from 'src/app/service/service.service';
 
 @Component({
   selector: 'app-admindash',
   templateUrl: './admindash.component.html',
   styleUrls: ['./admindash.component.css']
 })
-export class AdmindashComponent {
+export class AdmindashComponent implements OnInit{
 title1='Mahbub';
+
+detail:Details[];
+
+
+constructor(private storageService: StorageService,
+  private router: Router,
+  private service: ServiceService) {
+}
+  ngOnInit(): void {
+    this.service.getDetails().subscribe((abc:Details[])=>{this.detail=abc})
+  }
+
 
 isSidebarOpen = false;
   
@@ -21,12 +37,14 @@ isSidebarOpen = false;
     ];
   
     searchQuery: string = '';
+    searchQuery1: Date = null;
+    searchQuer2: number = 0;
   
     get filteredItems() {
-      return this.items.filter(item =>
-        item.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-        item.email.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-        item.phone.includes(this.searchQuery)
+      return this.detail.filter(item =>
+        //  item.date_booked.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        item.pickup.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        item.dropup.includes(this.searchQuery)
       );
     }
 
