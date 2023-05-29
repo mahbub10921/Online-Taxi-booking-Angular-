@@ -10,6 +10,7 @@ import { BookingList } from 'src/app/inter/driverBookingList';
 import { DriverEarnings } from 'src/app/inter/driverEarnings';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Details } from 'src/app/inter/details';
+import { NotificationService } from 'src/app/notification.service';
 
 @Component({
   selector: 'app-driverdash',
@@ -114,7 +115,7 @@ export class DriverdashComponent {
 
   constructor(private storageService: StorageService,
     private router: Router,
-    private service: ServiceService) {
+    private service: ServiceService,private notificationService: NotificationService) {
 
 
   }
