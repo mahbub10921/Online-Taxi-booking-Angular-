@@ -1,0 +1,48 @@
+<div class="div">
+    <img src="assets\Dako-Logo.png" height="60px" width="180px" style="border:2px solid rgb(1, 36, 1) ;border-radius: 3px;">
+    <form class="form-inline" style="margin-left: 65px;">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    <div style="flex: 1;"></div>
+    <div>
+    <li class="nav-item dropdown" style="margin-right: 10px;margin-bottom: 5px;">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 20px;text-align: center;">
+        <b style="color: aliceblue;">Mahbubul Haque </b>  
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">My profile</a>
+          <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" href="#" (click)="logout()">Logout</a>
+        </div>
+      </li>
+    </div>
+</div>
+<!-- <div style="position: absolute;top: 71px;background: rgb(255, 255, 255);height:7px; width:60px;left: 140px; "></div> -->
+
+
+
+
+<div class="sidebar">
+    <div class="sidebar-header">
+      <button class="hamburger-btn" onclick="toggleSidebar1()">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+    <div class="sidebar-content">
+      <!-- Add your dialogue boxes or content here -->
+      <div class="dialogue-box">Manage Taxi</div>
+      <div class="dialogue-box">Manage Driver</div>
+      <div class="dialogue-box">Manage Route</div>
+      <div class="dialogue-box">Settings</div>
+      <div class="dialogue-box">Accounts</div>
+      <div class="dialogue-box">Manage Route</div>
+      <div class="dialogue-box">FAQ</div>
+
+      <div class="dialogue-box">Tax documents</div>
+
+    </div>
+  </div>
+  <router-outlet></router-outlet> 

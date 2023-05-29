@@ -8,6 +8,7 @@ import { StorageService } from 'src/app/loginService/storage.service';
 import { data } from 'jquery';
 import { BookingList } from 'src/app/inter/driverBookingList';
 import { DriverEarnings } from 'src/app/inter/driverEarnings';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-driverdash',
@@ -187,17 +188,7 @@ export class DriverdashComponent {
 
 
 
-
-
-
-
-
-
-
-
-
-
-  dropup(id: number) {
+ dropup(id: number) {
 
     this.idd = id
     console.log("eitai" + this.idd);
@@ -215,6 +206,37 @@ export class DriverdashComponent {
   reloadPage() {
     window.location.reload();
   }
+
+
+
+form:FormGroup = new FormGroup({
+
+  id:new FormControl(this.myObject.id),
+    pickup: new FormControl(this.myObject.pickup),
+    dropup:new FormControl(this.myObject.dropup),
+    fare: new FormControl(this.myObject.fare),
+    status: new FormControl(this.myObject.status),
+    clientName: new FormControl(this.myObject.clientName),
+    phone: new FormControl(this.myObject.phone)
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

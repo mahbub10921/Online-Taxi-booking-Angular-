@@ -33,6 +33,16 @@ export class AdminComponent implements OnInit {
       this.isSidebarOpen = !this.isSidebarOpen;
     }
   
+
+
+    
+
+
+
+     toggleSidebar1() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('collapsed');
+    }
   
 
 

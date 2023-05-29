@@ -1,55 +1,38 @@
-<!-- <div class="main">
+<div class="main">
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;" routerLink="/addcar">Add Car</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Available Car</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;" routerLink="/managecar" >Manage Car</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;" routerLink="/regiscar">Registered Car</div>
-    <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;" routerLink="/adddriver" >Add Driver</div>
+    <!-- <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;" routerLink="/adddriver" >Add Driver</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Ongoing Trip</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Trip Completed</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Route Management</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Total Earning</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Pending Earning</div>
     <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Manage Driver</div>
-    <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Registered Client</div>
+    <div  class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow" style="height:70px ;width: 200px;box-sizing: border-box;padding: 15px;text-align: center;">Registered Client</div> -->
 
 
-</div> -->
+</div>
 
 
-<nav class="navbar">
-    <div class="navbar-brand">
-      <span class="navbar-logo">Your Logo</span>
-    </div>
-    <button class="navbar-toggle" (click)="toggleSidebar()">Toggle
-      <i class="fas fa-bars"></i>
-    </button>
-  </nav>
-  
-  <!-- Sidebar -->
-  <div class="sidebar" [ngClass]="{ 'sidebar-open': isSidebarOpen }">
-    <ul class="sidebar-nav">
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="fas fa-home"></i>
-          <span class="sidebar-text">Home</span>
-        </a>
-      </li>
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="fas fa-user"></i>
-          <span class="sidebar-text">Profile</span>
-        </a>
-      </li>
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="fas fa-cog"></i>
-          <span class="sidebar-text">Settings</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  
-  <!-- Main Content -->
-  <div class="main-content">
-    <!-- Your content goes here -->
-  </div>
+
+<div class="container">
+  <input type="text" [(ngModel)]="searchQuery" placeholder="Search">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredItems">
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.phone }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
