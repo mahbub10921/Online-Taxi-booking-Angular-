@@ -7,6 +7,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { IncomingRequest } from '../inter/request';
 import { Subscription, interval } from 'rxjs';
 import { User } from '../inter/user';
+import { NotificationService } from '../notification.service';
 
 
 
@@ -18,12 +19,21 @@ import { User } from '../inter/user';
   styleUrls: ['./available-cab.component.css']
 })
 export class AvailableCabComponent implements OnInit{
+
+  notification: string;
+
   constructor(
     public service: ServiceService,
     private route: ActivatedRoute,
     private router: Router,
-    // private homeComponent:HomeComponent
-  ) { }
+    private notificationService: NotificationService
+  ) {
+    
+    this.notificationService.notification$.subscribe(message => {
+      this.notification = message;
+    });
+
+   }
 
   Request: IncomingRequest;
   private subscription: Subscription;
@@ -74,6 +84,7 @@ export class AvailableCabComponent implements OnInit{
 
 
 
+  
 
 
 
