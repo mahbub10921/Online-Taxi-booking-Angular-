@@ -15,7 +15,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AvailableCabComponent } from './available-cab/available-cab.component';
 import { BookingformComponent } from './bookingform/bookingform.component';
 import { AutosuggestComponent } from './autosuggest/autosuggest.component';
-import { PopComponent } from './pop/pop.component';
 import { Pop2Component } from './pop2/pop2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewComponent } from './new/new.component';
@@ -34,7 +33,6 @@ import { NewComponent } from './new/new.component';
     AvailableCabComponent,
     BookingformComponent,
     AutosuggestComponent,
-    PopComponent,
     Pop2Component,
     NewComponent,
     

@@ -15,14 +15,12 @@ import { BookingformComponent } from './bookingform/bookingform.component';
 import { AutosuggestComponent } from './autosuggest/autosuggest.component';
 import { RouteComponent } from './module/admin/route/route.component';
 import { AdddriverComponent } from './module/admin/adddriver/adddriver.component';
-import { PopComponent } from './pop/pop.component';
 import { Pop2Component } from './pop2/pop2.component';
 
 const routes: Routes = [
   { path: '', component:   LoginComponent},
   { path: 'home', component: HomeComponent },
   { path: 'bookingform', component: BookingformComponent },
-  { path: 'pop', component: PopComponent },
   { path: 'pop2', component: Pop2Component },
 
   {path:'adddriver', component: AdddriverComponent},

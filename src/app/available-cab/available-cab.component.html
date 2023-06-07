@@ -61,7 +61,7 @@
                     <th class="text-center" scope="col">Cab Registration No</th>
                     <th class="text-center" scope="col">Cab Model</th>
                     <th class="text-center" scope="col">Category</th>
-                    <th class="text-center" scope="col">Driver Name</th>
+                    <th class="text-center" scope="col">Driver</th>
                     <th class="text-center" scope="col">Fare</th>
                     <th class="text-center" scope="col">Action</th>
 
@@ -73,7 +73,7 @@
                       <td style="text-align: center;">{{v.model}}</td>
                       <td style="text-align: center;">{{v.category}}</td>
 
-                      <td style="text-align: center;"> <img [src]="v.imagePath" alt=""  height="40px" width="40px">    <br> {{v.driver.name}}
+                      <td style="text-align: center;"> <img src="assets\IMG.jpg" alt=""  height="40px" width="40px">    <br> {{v.driver.name}}
                       </td>
 
                       <td style="text-align: center;"> {{(v.fair * this.distance2).toFixed(0)}} &nbsp; Tk.</td>

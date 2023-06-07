@@ -69,6 +69,11 @@
     padding: 10px;
     margin-bottom: 10px;
   }
+
+  .dialogue-box:hover{
+    background-color: #053804;
+    color: white;
+  }
   
   /* Media query for smaller screens */
   @media (max-width: 768px) {
