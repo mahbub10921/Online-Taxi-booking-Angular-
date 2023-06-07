@@ -111,6 +111,11 @@ export class DriverdashComponent {
   myObject3!: BookingList;
 
 
+  sendNotification() {
+    this.notificationService.sendNotification('your request has been confirmed!');
+  }
+
+
 
 
   constructor(private storageService: StorageService,
@@ -197,6 +202,7 @@ export class DriverdashComponent {
 
 
     localStorage.removeItem("id");
+    this.sendNotification();
   }
 
 

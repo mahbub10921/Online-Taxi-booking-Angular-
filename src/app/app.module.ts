@@ -19,6 +19,7 @@ import { Pop2Component } from './pop2/pop2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewComponent } from './new/new.component';
 
+
 // import { trigger, state, style, animate, transition } from '@angular/animations';
 
 
